@@ -1,17 +1,36 @@
+
+
 div {
     font-family: arial, sans-serif;
     font-size: 13px;
-    color: #222222;
+    
+
 }
 
 .navbar {
-    display: inline-block;
+    display: inline;
     position: absolute;
     top: -295px;
     right: 0;
     width: 100%;
+    color: aqua;
+}
+
+li {
+    float: left;
+    text-align: center;
+
+}
+
+.cenImage {
+    position: center;
 }
 
 .search {
     position: absolute;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
 }
