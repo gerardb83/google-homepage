@@ -1,0 +1,13 @@
+div {
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    color: #222222;
+}
+
+.navbar {
+    display: inline-block;
+    position: absolute;
+    top: -295px;
+    right: 0;
+    width: 100%;
+}
