@@ -11,3 +11,7 @@ div {
     right: 0;
     width: 100%;
 }
+
+.search {
+    position: absolute;
+}
