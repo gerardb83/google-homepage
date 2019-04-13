@@ -1,9 +1,13 @@
 
+p {
+    color: purple;
+}
 
 div {
     font-family: arial, sans-serif;
     font-size: 13px;
-    
+    color: purple;
+    box-align: right;
 
 }
 
@@ -13,13 +17,17 @@ div {
     top: -295px;
     right: 0;
     width: 100%;
-    color: aqua;
+    color: rgb(255, 0, 0);
 }
 
 li {
-    float: left;
-    text-align: center;
-
+    font-size: 10pt; 
+    text-align: left;
+    color:#550055;  
+    font-family: Helvetica; 
+    border-color: #999;
+    border-width: 0 0 1px 0;
+    border-style: dotted;
 }
 
 .cenImage {

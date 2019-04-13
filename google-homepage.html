@@ -2,33 +2,39 @@
 <html>
     <head>
         <title>Google</title>
-        <link rel="stylesheet" type="text/css" href="/google-homepage.css">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
+    <body>
     <div class="navbar">
+        
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#store">Store</a></li>
-            <li><a href="#gmail">Gmail</a></li>
-            <li><a href="images">Images</a></li>
-            <li><img src="/Pictures/ChromeIcon.jpeg"></li>
-            <li><img src="/GPlusIcon.png"></li>
+            <li><a href="#gmail" id="gmail">Gmail</a></li>
+            <li><a href="images" id="images">Images</a></li>
+            <li><a href="#chrome"><img id="chrome" src="chrome.jpeg"></li>
+            <li><a href="#icon"><img id="icon" src="icon.png"></li>
         </ul>
     </div>
-    <div class="cenImage">
-        <img src="/Pictures/cenimage.png"/>
-    </div>
-    <div class="search">
-        <form>
+    <div id="central">
+        <div class="cenimage">
+          <img src="cenimage.png">
+     </div>
+        <div class="search">
+         <form>
             <input type="text" name="search" id="seach">
+        </div>
+   
+        <div class="submit">
+            <input value="Google Search" aria-label="Google Search" name="search" type="submit">
+            <input value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" id="lucky" name="lucky" type="submit">
+         </div>
+        <div class="cenImageLink">
+             <a href="#cenImageLink">Explore the 100th anniversary of Bauhaus</a>
     </div>
    
-    <div class="submit">
-        <input value="Google Search" aria-label="Google Search" name="search" type="submit">
-        <input value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" id="lucky" name="lucky" type="submit">
-    </div>
-    <div class="cenImageLink">
-        <a href="#cenImageLink">Explore the 100th anniversary of Bauhaus</a>
-    <div class="footer">
+        <div class="footer">
             <ul>
                     <li><a href="#advertising">Advertising</a></li>
                     <li><a href="#business">Business</a></li>
@@ -37,5 +43,5 @@
                     <li><a href="settings">Settings</a></li>
             </ul>
                 </div>
-      
+    </body>
 </html>

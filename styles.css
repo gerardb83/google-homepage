@@ -1,0 +1,71 @@
+
+body {
+    color: gray;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+}
+
+div {
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    color: purple;
+    box-align: right;
+
+}
+
+.navbar {
+    color: gray;
+   
+    text-decoration: none;
+    
+}    
+
+li {
+    font-family: arial, sans-serif;
+    font-size: 13px; 
+    border-width: 0 0 0 0;
+    display: inline;
+    margin: 20px;
+}
+
+.cenimage {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.search {
+    position: absolute;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+#gmail {
+    position: absolute
+
+}
+
+#chrome {
+    width: 65px;
+    height: 45px;
+    position: right;
+
+}
+#icon {
+    width: 45px;
+    height: 45px;
+    position: right;
+    z-index: 5;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+p {
+    position: absolute;
+    float: center;
+}
