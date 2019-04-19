@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+}
+
+.hero { 
+        /* The image used */
+        background-image: url("img_parallax.jpg");
+      
+        /* Set a specific height */
+        height: 50%; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+/*
+.title {
+    position: absolute;
+    border: 100px, 200px;
+    border-color: whitesmoke;
+    z-index: 10;
+    background-color: whitesmoke;
+}
+*/
+.title {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+  }
+
+body {
+    position: relative;
+    font-family: junicode, "times new roman", serif;
+    font-size: 15px;
+    height: 100%;
+    background-color: whitesmoke;
+    background-attachment: fixed;
+     
+}
+
+ul li {
+    display: inline;
+    text-align: center;
+}
+
+nav {
+    font-size: 13px;
+    color: gray;
+    width: 100%;
+    line-height: 24px; 
+}
+
+h1 {
+    font-size: 42pt;
+    text-align: center;
+    padding: 10px;
+    margin: 30px;
+}
+
+h2 {
+    font-size: 18pt;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/*
+.hero {
+    width: auto;
+    text-align: center;
+    padding: 10px; 
+}
+*/
+
+
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+    padding: 20px;
+    margin: 10px;
+
+  }
+
+#jaws_logo {
+    width: 30%;
+    height: 30%;
+    align-self: center;
+}
+
+#oddjob_logo {
+    width: 60%;
+    height: 60%;
+    position: relative;
+    bottom: 130px;
+}
+
+#oddjob_newpost {
+    position: relative;
+    bottom: 220px;

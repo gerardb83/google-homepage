@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <input class="numberInput" type="text">
+  <p></p>
+  
+  <script>
+ 
+    var input = document.querySelector('.numberInput');
+    var para = document.querySelector('p');
+
+    function squared(num) {
+  return num * num;
+}
+
+function cubed(num) {
+  return num * num * num;
+}
+
+function factorial(num) {
+  var x = num;
+  while (x > 1) {
+    num *= x-1;
+    x--;
+  }
+  return num;
+}
+
+function circumference(num) {
+        return Math.PI * num * num;
+    }
+function square(num) {
+    return Math.sqrt(num)
+}
+
+function cube(num) {
+    return Math.cbrt(num)
+}
+
+
+    input.onchange = function() {
+  var num = input.value;
+  if (isNaN(num)) {
+    para.textContent = 'You need to enter a number!';
+  } else {
+    para.textContent = num + ' squared is ' + squared(num) + '. ' +
+                       num + ' cubed is ' + cubed(num) + '. ' +
+                       num + ' factorial is ' + factorial(num) + '. ' +
+                       num + ' is the radius of a circle with a circumference of ' + circumference(num) + '. ' +
+                       'The square root of ' + num + ' is ' + square(num) + '. ' +
+                       'The cube root of ' + num + ' is ' + cube(num) + '. ' + 
+                       '   You\'re welcome.' 
+
+  }
+}
+/*
+    function circle(radius) {
+        this.radius = radius;
+        this.area = function() {
+            return Math.PI * this.radius * this.radius;        
+        }
+        this.perimeter = function() {
+            return 2*Math.PI*this.radius;
+        }
+    } 
+    var c = new circle(3);
+    console.log('Area =', c.area().toFixd(2));
+    console.log('Perimeter = '), c.perimeter().toFixed(2));
+
+  
+  
+  
+
+
+
+
+*/    
+
+
+  </script>
+</body>
+</html>
