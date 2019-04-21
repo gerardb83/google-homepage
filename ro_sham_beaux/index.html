@@ -8,51 +8,53 @@
     </body>
 
     <script>
-        const choices = ["rock", "paper", "scissors"]
-        let score = {player: 0, cpu: 0 , rounds: 0};
+        const choices = ['rock', 'paper', 'scissors']
+        let score = {player: 0, cpu: 0 , rounds: 1};
        
+        
 
 /// Part 3. -- Computer Selection        
-        function computerPlay() {
+            function computerPlay() {
             let getRandom = Math.floor(Math.random() * choices.length)
             return choices[getRandom]
         }
 
 /// Part 4. -- Single Round
+   
+    /// A Single Round is Played
+        function playRound(playerSelection, computerSelection) {
+            playerSelection = prompt("Please enter 'rock', 'paper', or 'scissors': ").toLowerCase();
+                if (playerSelection !== 'rock' && playerSelection !== 'scissors' && playerSelection !== 'paper')
+                { return playRound();
+                } else if (playerSelection === undefined || playerSelection === null) 
+                { return playRound();
+            }
+            computerSelection = computerPlay();
+                console.log(`You selected: "${playerSelection}"`);
+                console.log(`Computer selected: "${computerSelection}"`);
+                
+            ///Functions defining what happens at each outcome
+                        function youTie() {
+                            score.round += 1;
+                            console.log("Tie! Double " + playerSelection + "s! Go again!");
+                            return game();
+                        }
 
-   /// Smoothes out any player entries re caps and nulls
-   function playerPlay() {
-            playerSelection = prompt("Please choose 'rock', 'paper', or 'scissors'.").toLowerCase();
-            
-            if (playerSelection === undefined || playerSelection === null) 
-             {playerSelection = prompt("Please choose 'rock', 'paper', or 'scissors'.")
-            } else if 
-                (playerSelection !== 'rock' && playerSelection !=='paper' && playerSelection !=='scissors') {
-               { playerSelection = prompt("Please choose 'rock', 'paper', or 'scissors'.")
-             }
-             return playerSelection;
-        }     
+                        function youWin() {
+                            score.player += 1;
+                            score.round += 1;
+                            console.log("You win! " + playerSelection + " beats " + computerSelection + "!")
+                            return game();
+                        }
 
+                        function youLose() {
+                            score.cpu += 1;
+                            score.round += 1;
+                            console.log("You lose! " + computerSelection + " beats " + playerSelection + "!")
+                            return game();
+                        }
 
-  /// Gives us standard functions for scoring and outcomes
-  function youTie() {
-            return ("Tie! Double " + playerSelection + "s! Go again!");
-        }
-
-        function youWin() {
-            score.player++;
-            return ("You win! " + playerSelection + " beats " + computerSelection + "!")
-        }
-
-        function youLose() {
-            score.cpu++;
-            return ("You lose! " + computerSelection + " beats " + playerSelection + "!")
-        }
-    
-    /// We come to the meat of the function itself
-        function playRound() {
-            playerPlay()
-            computerPlay()            
+        ///The condintionals determining playRound() outcomes
             if (playerSelection === computerSelection) {
                 youTie();
             } else if (playerSelection === 'rock') {
@@ -76,12 +78,29 @@
             }
         }
 
+    /// Reset and Endgame functions
+            function reset() {
+                    let score = { player: 0, cpu: 0, rounds: 1};
+            }
+                
+            function endGame() {
+                if (score.player === 5) {
+                    console.log("YOU WIN!!! Your kind shall be suffered to survive, for now...")
+                } else if (score.cpu === 5) {
+                    console.log("LOSER! Truely the machines shall inherit the earth, mortal fool!")
+                }
+                console.log("Play again?")        
+            }
 
-     
-
-                        
-  
-
+/// The shell of the game itself    
+    function game() {
+        console.log("Round: " + score.rounds + " Human: " + score.player + "; Machine: " + score.cpu)
+        if (score.player === 5 || score.cpu === 5) {
+            endGame();
+         } else {
+             playRound();
+         }
+    }
+        
     </script>
-
 </html>
