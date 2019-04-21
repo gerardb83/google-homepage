@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ro Sham Beaux</title>
+    </head>
+    <body>
+        
+    </body>
+
+    <script>
+        const choices = ["rock", "paper", "scissors"]
+        let score = {player: 0, cpu: 0 , rounds: 0};
+       
+
+/// Part 3. -- Computer Selection        
+        function computerPlay() {
+            let getRandom = Math.floor(Math.random() * choices.length)
+            return choices[getRandom]
+        }
+
+/// Part 4. -- Single Round
+
+   /// Smoothes out any player entries re caps and nulls
+   function playerPlay() {
+            playerSelection = prompt("Please choose 'rock', 'paper', or 'scissors'.").toLowerCase();
+            
+            if (playerSelection === undefined || playerSelection === null) 
+             {playerSelection = prompt("Please choose 'rock', 'paper', or 'scissors'.")
+            } else if 
+                (playerSelection !== 'rock' && playerSelection !=='paper' && playerSelection !=='scissors') {
+               { playerSelection = prompt("Please choose 'rock', 'paper', or 'scissors'.")
+             }
+             return playerSelection;
+        }     
+
+
+  /// Gives us standard functions for scoring and outcomes
+  function youTie() {
+            return ("Tie! Double " + playerSelection + "s! Go again!");
+        }
+
+        function youWin() {
+            score.player++;
+            return ("You win! " + playerSelection + " beats " + computerSelection + "!")
+        }
+
+        function youLose() {
+            score.cpu++;
+            return ("You lose! " + computerSelection + " beats " + playerSelection + "!")
+        }
+    
+    /// We come to the meat of the function itself
+        function playRound() {
+            playerPlay()
+            computerPlay()            
+            if (playerSelection === computerSelection) {
+                youTie();
+            } else if (playerSelection === 'rock') {
+                    if (computerSelection === 'scissors') {
+                        youWin();
+                 } else {
+                        youLose();
+                    }
+            } else if (playerSelection === 'paper') {
+                    if (computerSelection === 'rock') {
+                        youWin();
+                    } else {
+                        youLose();
+                    }
+            } else if (playerSelection === 'scissors') {
+                    if (computerSelection === 'paper') {
+                        youWin();
+                    } else {
+                        youLose();
+                    }
+            }
+        }
+
+
+     
+
+                        
+  
+
+    </script>
+
+</html>
